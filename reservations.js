@@ -9,8 +9,10 @@ var reservations = [
 	{
 		name: "Jeff",
 		phone: "1231231234",
-		email: "mike@mike.com",
-		uniqueId: 1
+		email: "jeff@jeff.com",
+		uniqueId: 2
 	}
 
 ]
+
+module.exports = reservations;
