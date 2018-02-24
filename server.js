@@ -14,20 +14,10 @@ var PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Basic route that sends the user first to the AJAX Page
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "html/home.html"));
-});
-
-// Basic route that sends the user first to the AJAX Page
-app.get("/reserve", function(req, res) {
-  res.sendFile(path.join(__dirname, "html/reserve.html"));
-});
-
-// Basic route that sends the user first to the AJAX Page
-app.get("/tables", function(req, res) {
-  res.sendFile(path.join(__dirname, "html/tables.html"));
-});
+// Sets up the Express app to handle data parsing
+// =============================================================
+require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
 
 // Starts the server to begin listening
 // =============================================================
