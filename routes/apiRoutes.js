@@ -19,4 +19,30 @@ module.exports = function (app) {
 		}
 	});
 
+	// Adds a new reservation
+	app.post("/api/new-reservation", function(req,res) {
+
+		var newReservation = req.body;
+
+		console.log(newReservation);
+
+		reservations.push(newReservation);
+		
+		return res.json(reservations);
+
+    });
+
+    // Adds a new waiting list
+	app.post("/api/new-waitinglist", function(req,res) {
+
+		var newWaitingList = req.body;
+
+		console.log(newWaitingList);
+
+		waitingList.push(newWaitingList);
+		
+		return res.json(waitingList);
+
+    });
+
 }

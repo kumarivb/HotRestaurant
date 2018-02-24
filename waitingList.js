@@ -2,7 +2,12 @@ var reservations = require("./reservations");
 
 var waitingList = [
 
-	reservations[1]
+	{
+		name: "Dav",
+		phone: "4539997685",
+		email: "dav@dav.dav",
+		uniqueId: 3
+	}
 
 ]
 
